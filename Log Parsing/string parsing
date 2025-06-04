@@ -1,0 +1,32 @@
+# Given this provided sales data calculate the average sale and sort them from highest to lowest
+summer_sales = """ProductName,Newyork,Maine
+Acme,6.0,5.5
+Doe,4.7,8.5
+MSG,4.5,6.3
+Fiz,7.7,5.4"""
+
+winter_sales = """ProductName,Texas,California,Nevada
+MSG,8.3,7.4,6.9
+Acme,6.3,7.5,5.9
+Fiz,5.8,8.0,9.4,4.9
+Doe,8.8,9.0,5.9"""
+
+# you would essnetially want to go through every single value split them by the commas and also strip off all the white spaces
+# this is done with .strip().split(\n) -> strip off the new line and then
+# I'd say theoretically you could do this through pandas / Dictreader using csv module as well in non - interview env's which will make it alot easier
+# We want to create a helper function to parse through both seasons sales data and the string itself then call the function upon summer_sales and winter_sales respectively
+
+sales = {}
+def parsing_sales (sales_str, season_sales):
+    converting_to_lines = sales_str.strip().split('\n')
+    for line in converting_to_lines[1:]: # this would essentially skip the header -> header starts at 1 
+        parts = line.split(',')
+        return parts
+
+
+
+parsing_sales(summer_sales, sales)
+
+print (summer_sales)
+
+
