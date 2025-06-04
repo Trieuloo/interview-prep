@@ -20,8 +20,7 @@ sales = {}
 def parsing_sales (sales_str, season_sales):
     converting_to_lines = sales_str.strip().split('\n')
     for line in converting_to_lines[1:]: # this would essentially skip the header -> header starts at 1 
-        parts = line.split(',')
-        return parts
+        parts = line.split(',')line
 
 
 
